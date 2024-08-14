@@ -26,12 +26,19 @@ public class Main {
         System.out.println("Минимальная сумма трат за неделю составила " + minExpenses + " рублей. Максимальная сумма трат за неделю составила " + maxExpenses + " рублей.");
         System.out.println();
         System.out.println("Задача №3");
-        int[] expenses2 = {640000, 104000, 37000, 553000, 341000};
+        float[] expenses2 = {640000f, 104000f, 37000f, 553000f, 341000f};
         float total2 = 0f;
-        for (int element : expenses2) {
-            total2 = (total2 + element) / 4;
+        for (float element : expenses2) {
+            total2 = total2 + element;
+
         }
-        System.out.println(total2);
+        float agg = 0f;
+        for (float i = 0; i < expenses2.length; i++) {
+            agg = total2 / expenses2.length;
+        }
+        System.out.println("Средняя сумма трат за месяц составила " + agg + " рублей.");
+
+
         System.out.println();
         System.out.println("Задача №4");
         char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
